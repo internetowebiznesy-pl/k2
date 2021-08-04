@@ -1,0 +1,160 @@
+.linksPC{
+	display:none;
+}
+
+header.nav{
+	display:flex;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:calc(var(--padding)*2 + var(--logoHeight));
+	z-index:9;
+	background-color:#fff;
+	font-family:lato;
+	padding:var(--padding) var(--margin);
+}
+
+.logoType{
+	display:flex;
+}
+
+.logo{
+	width:var(--logoWidth);
+	height:var(--logoHeight);
+}
+header.nav h1{
+	margin-left:var(--margin); 
+	font-size:var(--sizeNavH1);
+	color:#000;
+}
+
+.logoTag{
+	display:flex;
+	align-items:flex-end;
+}
+
+.burger,
+.exit{
+	position:fixed;
+	top:var(--padding) ;
+	right:var(--padding);
+	
+	height:calc(var(--burger) + 10px);
+	width:calc(var(--burger) + 10px);
+	
+	padding:10px; 
+	z-index:10;
+	
+}
+.burger{
+	top:-200px;
+}
+
+.exit{
+	right:-200%;
+}
+
+.burger.show{
+	animation:showT .2s linear both;
+}
+
+.exit.show{
+	animation:showR .2s linear both;
+}
+
+@keyframes showT{
+	100%{top:var(--padding);};
+}
+
+@keyframes showR{
+	100%{right:var(--padding);};
+}
+
+.pup{
+	position:fixed;
+	top:0;
+	right:-200%;
+	width:100%;
+	height:100vh;
+	background-color:rgba(28, 73, 96, .75);
+	display:flex;
+	justify-content:space-around;
+	flex-direction:column;
+	z-index:10;
+	text-align:center;
+}
+
+.pup .filter{
+	background-color:#fff;
+	width:calc(100% - var(--logoWidth) - var(--padding)*2);
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	margin-left:auto;
+	justify-content:center;
+}
+
+.pup.show{
+	animation:showPupR .15s linear both;
+}
+
+.footerNav{
+	padding-bottom:var(--paddingNavLink);
+}
+nav h6{
+	line-height:24px;
+	font-size:10px;
+}
+
+@keyframes showPupR{
+	100%{right:0;};
+}
+
+@media(min-width: 360px){
+nav h6{
+	line-height:28px;
+	font-size:14px;
+}
+}
+
+@media(min-width: 567px){
+nav h6{
+	line-height:28px;
+	font-size:14px;
+}
+}
+
+@media (min-width: 960px){
+	header.nav{
+	padding:calc(var(--padding)/2) var(--padding);
+	height:calc(var(--logoHeight) + var(--padding));
+	}
+	
+	header.nav h1{
+		margin-left:30px;
+	}
+	.mobile{
+		display:none;
+	}
+	
+	.linksPC{
+		display:block;
+		margin-left:auto;
+	}
+	
+	.linksPC ul{
+		display:flex;
+	}
+	
+	.link:hover{
+		color:var(--colorLogoO);
+	}
+}
+
+@media (min-width:1024px){
+	
+	header.nav h1{
+		margin-left:32px;
+	}
+}

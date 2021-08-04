@@ -1,0 +1,85 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font-family:arial;
+}
+:root{
+	--color: #ff7930;
+}
+
+main{
+	width:80%;
+	margin:40px auto;
+	display:flex;
+	justify-content:space-between;
+}
+
+.borderBut{
+	position:relative;
+	cursor:pointer;
+}
+
+.borderBut::before{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:100%;
+	border:2px solid #000;
+	top:10px;
+	left:-10px;
+	transition:.2s;
+}
+
+
+.button{
+	position:relative;
+	background-color:var(--color);
+	color:#fff;
+	padding:10px 20px;
+	left:0;
+	top:0;
+}
+
+.button1{
+	animation:cykcyk 6s linear infinite; 
+}
+.button2{
+	animation:cykcyk 6s 1s linear infinite; 
+}
+
+.button3{
+	animation:cykcyk 6s 2s linear infinite ; 
+}
+
+.borderBut:hover::before{
+	top:-2px;
+	left:-2px;
+}
+.button1:hover{
+	animation-play-state:paused;
+}
+.button2:hover{
+	animation-play-state:paused;
+}
+.button3:hover{
+	animation-play-state:paused;
+}
+
+/* animacja pobudzająca */
+@keyframes cykcyk{
+	
+	1%{left:-6px;}
+	2%{left:6px;}
+	3%{left:-6px;}
+	4%{left:6px;}
+	5%{left:-6px;}
+	6%{left:6px;}
+	7%{left:-6px;}
+	8%{left:6px;}
+	9%{left:-6px;}
+	10%{left:0;}
+	100%{left:0;}
+	
+}

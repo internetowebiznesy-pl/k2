@@ -1,0 +1,76 @@
+
+.project  .imgProject{
+	margin-top:calc(var(--marginOf1) + 8px ); 
+}
+
+.boxRealization{
+	height:216px;
+}
+.idea::before,
+.project::before{
+	top:20px;
+	left:0;
+	background-image:url('../img/k2webdevelopment-logo-projektujemy-najlepsze-strony-internetowe.png');
+	background-position:0 top;
+	background-size:80%;
+	background-repeat:no-repeat;
+}
+
+.idea .buttonBorder,
+.project .buttonBorder{
+	margin-left:var(--margin);
+}
+
+.idea .buttonBorder::before,
+.project .buttonBorder::before{
+	top:8px;
+	left:8px;
+}
+
+.idea .buttonBorder:hover::before,
+.project .buttonBorder:hover::before{
+	top:3px;
+	left:3px;
+}
+
+@media (min-width:568px){
+.imgProject{
+	height:380px;
+}
+
+.idea::before,
+.project::before{
+	background-size:50%;
+}
+}
+
+@media (min-width:640px){
+
+.idea::before,
+.project::before{
+	background-size:40%;
+}
+}
+
+@media (min-width:768px){
+.imgProject{
+	height:500px;
+}
+
+
+}
+
+
+@media (min-width:960px){
+	.idea .buttonBorder,
+	.project .buttonBorder{
+		margin-left:auto;
+	}
+}
+
+
+@media (min-width:1024px){
+	.imgProject{
+	height:533px;
+}
+}

@@ -1,0 +1,35 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+html{
+	
+}
+ul{
+	position:fixed;
+	top:20px;
+	left:20px;
+}
+div{
+	height:100vh;
+	width:100%;
+	background-size:cover;
+	background-position:top center;
+	background-repeat:no-repeat;
+}
+
+.one{
+	background-image:url('./1.png');
+	height:calc(100vh + 1px);
+}
+
+.two{
+
+	animation:load .5s linear both;
+}
+
+@keyframes load{
+	0%{background-color:red;)}
+	100%{background-image:url('./2.png');}
+}
